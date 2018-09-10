@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,12 +8,17 @@ import { HttpClient } from '@angular/common/http';
 export class GitHubService {
 
   private username = 'dacanetdev';
-  private client_id = '17203';
-  private client_secret = '4f:9e:12:1c:14:5c:38:69:3c:40:04:05:47:36:d4:21:71:e2:10:97';
+  private client_id = 'aa22b31f39203887b691';
+  private client_secret = 'ce37c38ee5a16f3bb56bd3c24e9a985159fb1378';
   constructor(private http: HttpClient) { }
 
-  getUser(): any {
-    return this.http.get(`http://api.github.com/users/${this.username}?client)id=${this.client_id}
+  getUser(username: string = this.username): Observable<any> {
+    return this.http.get(`http://api.github.com/users/${username}?client_id=${this.client_id}
+    &client_secret=${this.client_secret}`);
+  }
+
+  getRepos(username: string = this.username): Observable<any> {
+    return this.http.get(`http://api.github.com/users/${username}/repos?client_id=${this.client_id}
     &client_secret=${this.client_secret}`);
   }
 }
