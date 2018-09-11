@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/bootstrap/scss/functions.scss';
+
+@import 'variables.scss';
+
+$theme-colors: (
+  primary: $primary
+);
+
+$enable-flex: true;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-transitions: true;
+$table-active-bg: $cyan;
+$nav-link-disabled-color: $gray-100;
+
+@import 'bootswatch.scss';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
