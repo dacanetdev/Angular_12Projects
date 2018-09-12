@@ -1,21 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
 import { routing } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { AuthorizedComponent } from './authorized/authorized.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    AuthenticateComponent,
+    AuthorizedComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     routing
   ],
   providers: [],

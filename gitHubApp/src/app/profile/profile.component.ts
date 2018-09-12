@@ -7,7 +7,7 @@ import { GitHubService } from '../services/github.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  user: any[];
+  user: any;
   repos: any[];
   username: string;
 
