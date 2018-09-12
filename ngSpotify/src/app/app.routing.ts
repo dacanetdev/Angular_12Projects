@@ -1,10 +1,15 @@
-import { Route, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { AuthorizedComponent } from './authorized/authorized.component';
 
-export const routes: Route[] = [
-  { path: '', component: SearchComponent },
-  { path: 'about', component: AboutComponent }
+export const routes: Routes = [
+  { path: '', component: AuthenticateComponent },
+  { path: 'search', component: SearchComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'authenticate', component: AuthenticateComponent },
+  { path: 'authorized', component: AuthorizedComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);
