@@ -36,4 +36,24 @@ export class SpotifyService {
 
     return this.http.get(`https://api.spotify.com/v1/search?q=${searchStr}&type=${type}`, httpOptions);
    }
+
+   getArtist(id: string): any {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization':  `Bearer ${ sessionStorage.getItem('access-token') }`
+      })
+    };
+
+    return this.http.get(`https://api.spotify.com/v1/artists/${id}`, httpOptions);
+  }
+
+  getAlbums(artistId: string): any {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization':  `Bearer ${ sessionStorage.getItem('access-token') }`
+      })
+    };
+
+    return this.http.get(`https://api.spotify.com/v1/artists/${artistId}/albums`, httpOptions);
+  }
 }
