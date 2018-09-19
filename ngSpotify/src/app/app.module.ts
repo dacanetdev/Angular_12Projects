@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { AuthorizedComponent } from './authorized/authorized.component';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthorizedComponent } from './authorized/authorized.component';
     AboutComponent,
     SearchComponent,
     AuthenticateComponent,
-    AuthorizedComponent
+    AuthorizedComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,
