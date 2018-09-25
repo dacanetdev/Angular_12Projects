@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { AuthorizedComponent } from './authorized/authorized.component';
 import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ArtistComponent } from './artist/artist.component';
     SearchComponent,
     AuthenticateComponent,
     AuthorizedComponent,
-    ArtistComponent
+    ArtistComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,

@@ -56,4 +56,14 @@ export class SpotifyService {
 
     return this.http.get(`https://api.spotify.com/v1/artists/${artistId}/albums`, httpOptions);
   }
+
+  getAlbum(id: string): any {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Authorization':  `Bearer ${ sessionStorage.getItem('access-token') }`
+      })
+    };
+
+    return this.http.get(`https://api.spotify.com/v1/albums/${id}`, httpOptions);
+  }
 }
